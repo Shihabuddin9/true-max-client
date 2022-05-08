@@ -14,3 +14,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 + mongodb
 + react router
 
+## Description
+
+TRUEmax Dealer Management Website. This site has an authentication system. The user can sell his own car if he wants and he can take a dealership if he wants.
+
