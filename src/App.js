@@ -18,6 +18,7 @@ import UpdateServices from './component/UpdateServices/UpdateServices';
 import Dealers from './component/Dealers/Dealers';
 import React, { useState, useEffect } from 'react'
 import { FadeLoader } from 'react-spinners';
+import MyItems from './component/MyItems/MyItems';
 
 
 
@@ -56,6 +57,12 @@ function App() {
                 <Route path='/service' element={
                   <RequireAuth>
                     <ManageServices></ManageServices>
+                  </RequireAuth>
+                }></Route>
+
+                <Route path='/myitems' element={
+                  <RequireAuth>
+                    <MyItems></MyItems>
                   </RequireAuth>
                 }></Route>
 

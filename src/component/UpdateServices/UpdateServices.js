@@ -37,9 +37,9 @@ const UpdateServices = () => {
     return (
         <div className='md:my-16 my-14'>
             <nav className='bg-gray-200 w-full mb-10'>
-                <Link to="/service"><button className='text-gray-800 text-sm pb-1.5 pt-2 md:ml-12 ml-2'>&#171;
+                <Link to="/service"><button className='text-gray-800 text-sm py-3 md:ml-12 ml-2'>&#171;
                     Manage Items</button></Link>
-                <Link to="/addBestDealsCar"><button className='text-gray-800 text-sm pb-1.5 pt-2 ml-2'><span className='mr-2'>/</span>Add Items</button></Link>
+                <Link to="/addBestDealsCar"><button className='text-gray-800 text-sm py-3 ml-2'><span className='mr-2'>/</span>Add Items</button></Link>
             </nav>
             <div className='md:w-3/5 mx-auto'>
                 <div className='md:w-2/5 mx-auto mb-9'>

@@ -1,10 +1,25 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import Loading from '../../signinPage/Loading/Loading';
 import google from '../google-img/google.png'
 
 const SocialSignin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const navigate = useNavigate()
+    let location = useLocation();
+
+    if (loading) {
+        return <Loading></Loading>
+
+    }
+    let from = location.state?.from?.pathname || "/";
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
     return (
         <div>
             <div className='flex items-center'>

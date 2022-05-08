@@ -15,6 +15,7 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
 
 
 const Signin = () => {
+
     const [values, setValues] = useState({
         password: "",
         showPassword: false,
@@ -47,11 +48,11 @@ const Signin = () => {
         errorElement = <p className='text-red-600'>Error: {error?.message}</p>
     }
 
-    const handleUserSignin = e => {
-        e.preventDefault()
-        const email = e.target.email.value
-        const password = e.target.password.value
-
+    const handleUserSignin = event => {
+        event.preventDefault()
+        const email = event.target.email.value
+        const password = `event.target.${values}.value`
+        // console.log(email, password)
         signInWithEmailAndPassword(email, password)
 
     }

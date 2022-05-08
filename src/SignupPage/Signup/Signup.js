@@ -40,8 +40,9 @@ const Signup = () => {
         event.preventDefault()
         const userName = event.target.userName.value
         const email = event.target.email.value;
-        const password = event.target.password.value
-        const confirmPassword = event.target.confirmPassword.value
+        const password = `event.target.${values}.value`
+        const confirmPassword = `event.target.${confirmValues}.value`
+
 
         if (password !== confirmPassword) {
             setNotMatchPassword('Your two passwords did not match')
