@@ -1,0 +1,32 @@
+[
+    {
+        "id": "1",
+        "name": "coupe",
+        "img": "https://i.ibb.co/bgqqMMq/coupe-1.png"
+    },
+    {
+        "id": "2",
+        "name": "Crossover",
+        "img": "https://i.ibb.co/YywPgzB/crossover-1.png"
+    },
+    {
+        "id": "3",
+        "name": "Truck",
+        "img": "https://i.ibb.co/rd9FgXd/sedan-1.png"
+    },
+    {
+        "id": "4",
+        "name": "Wagon",
+        "img": "https://i.ibb.co/4FNy2c1/truck-1.png"
+    },
+    {
+        "id": "5",
+        "name": "Sedan",
+        "img": "https://i.ibb.co/hdVJpxK/wan.png"
+    },
+    {
+        "id": "6",
+        "name": "Convertible",
+        "img": "https://i.ibb.co/P45ZvxB/convertable.png"
+    }
+]

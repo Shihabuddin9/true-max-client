@@ -1,0 +1,47 @@
+.fitureImg {
+    /* background-image: url(/src/component/images/home-background-img.jpg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(/src/component/images/home-background-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    height: 640px;
+    position: relative;
+}
+
+.text-title {
+    transform: translateY(-50%);
+    z-index: 2;
+    position: absolute;
+    top: 46%;
+    left: 14%;
+    /* color: #dddd; */
+}
+
+@media only screen and (max-width: 639px) {
+    .fitureImg {
+        height: 250px;
+    }
+
+    .text-title {
+        top: 50%;
+        left: 3%;
+    }
+
+    .search-bar-sm-none {
+        display: none;
+    }
+}
+
+
+@media (min-width: 640px) and (max-width: 840px) {
+
+    .search-bar-sm-none {
+        margin-left: -70px;
+    }
+
+    .search-span {
+        margin-left: 162px;
+        margin-right: 134px;
+    }
+}

@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "name": "BMW",
+        "img": "https://i.ibb.co/rszbmKh/alfa.png"
+    },
+    {
+        "id": "2",
+        "name": "MERCEDES BENZ",
+        "img": "https://i.ibb.co/vZNRJmB/audi-logo-2.png"
+    },
+    {
+        "id": "13",
+        "name": "CHEVROLET",
+        "img": "https://i.ibb.co/V0FzxgP/bmw.png"
+    },
+    {
+        "id": "14",
+        "name": "FERRARI",
+        "img": "https://i.ibb.co/X4vnx3G/car-logo-PNG1657.png"
+    },
+    {
+        "id": "15",
+        "name": "TOYOTA",
+        "img": "https://i.ibb.co/JzJXVhs/ferrari.png"
+    },
+    {
+        "id": "16",
+        "name": "KIA",
+        "img": "https://i.ibb.co/Pz4gsLz/ford-logo-icon-png-14228.png"
+    },
+    {
+        "id": "17",
+        "name": "HONDA",
+        "img": "https://i.ibb.co/vmRQ5BZ/honda-logo.png"
+    },
+    {
+        "id": "18",
+        "name": "FORD",
+        "img": "https://i.ibb.co/KXNRF55/kia-PNG46.png"
+    },
+    {
+        "id": "19",
+        "name": "TESLA",
+        "img": "https://i.ibb.co/PCrnDSg/mercedes.png"
+    },
+    {
+        "id": "20",
+        "name": "MG",
+        "img": "https://i.ibb.co/QbCmmDr/tesla-logo-PNG19.png"
+    },
+    {
+        "id": "21",
+        "name": "AUDI",
+        "img": "https://i.ibb.co/XkWZVMg/toyota-logo.png"
+    },
+    {
+        "id": "22",
+        "name": "ALFA ROMEO",
+        "img": "https://i.ibb.co/stz9rGD/hevrolet-PNG157.png"
+    }
+]

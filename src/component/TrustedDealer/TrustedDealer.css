@@ -1,0 +1,18 @@
+.trusted-shadow:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.trusted-img-align {
+    width: 62%;
+    height: 48%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* @media only screen and (max-width: 639px) {
+    .img-align {
+        width: 50%;
+    }
+} */

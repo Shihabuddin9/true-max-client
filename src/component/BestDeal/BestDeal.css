@@ -1,0 +1,14 @@
+.bestdeal-img {
+    width: 200px;
+}
+
+@media only screen and (max-width: 639px) {
+    .bestdeal-img {
+        width: 100%;
+    }
+
+    .bestdeal-btn {
+        padding-left: 87px;
+        padding-right: 87px;
+    }
+}

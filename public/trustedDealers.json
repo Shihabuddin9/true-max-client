@@ -1,0 +1,66 @@
+[
+    {
+        "id": "1",
+        "name": "Showcase Auto Sales",
+        "address": "Morris Rd,England,AR 72046,USA",
+        "listing": "1",
+        "phone": "044770090*****Click to reveal!",
+        "img": "https://i.ibb.co/YkScbsf/41282-5927930-1091928-image.png"
+    },
+    {
+        "id": "2",
+        "name": "ALB Cars",
+        "address": "Morris Rd,England,AR 72046,USA",
+        "listing": "1",
+        "phone": "044770090*****Click to reveal!",
+        "img": "https://i.ibb.co/h9mTmDD/109757074-159287555689640-2548511625729875874-o.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Mx Selling Cars",
+        "address": "Morris Rd,England,AR 72046,USA",
+        "listing": "1",
+        "phone": "044770090*****Click to reveal!",
+        "img": "https://i.ibb.co/DKsNSs0/athlon.png"
+    },
+    {
+        "id": "4",
+        "name": "Athlon Automotives",
+        "address": "Morris Rd,England,AR 72046,USA",
+        "listing": "1",
+        "phone": "044770090*****Click to reveal!",
+        "img": "https://i.ibb.co/r6D22VS/autoslaes.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Amazed Autosales Ltd",
+        "address": "Morris Rd,England,AR 72046,USA",
+        "listing": "1",
+        "phone": "044770090*****Click to reveal!",
+        "img": "https://i.ibb.co/MNVbBSJ/cartrack.png"
+    },
+    {
+        "id": "6",
+        "name": "Joes AutoHub",
+        "address": "Morris Rd,England,AR 72046,USA",
+        "listing": "1",
+        "phone": "044770090*****Click to reveal!",
+        "img": "https://i.ibb.co/frjNpWd/joe.png"
+    },
+    {
+        "id": "7",
+        "name": "Car Track Holdings",
+        "address": "Morris Rd,England,AR 72046,USA",
+        "listing": "1",
+        "phone": "044770090*****Click to reveal!",
+        "img": "https://i.ibb.co/t4xMktc/max-1536x585.png"
+    },
+    {
+        "id": "8",
+        "name": "Mvp Automotives",
+        "address": "Morris Rd,England,AR 72046,USA",
+        "listing": "1",
+        "phone": "044770090*****Click to reveal!",
+        "img": "https://i.ibb.co/Qk9Yxvf/mvp.png"
+    }
+]
