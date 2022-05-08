@@ -10,7 +10,7 @@ const ContactDealer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/contact`
+        const url = `https://warm-wildwood-23363.herokuapp.com/contact`
         fetch(url, {
             method: 'POST', // or 'PUT'
             headers: {

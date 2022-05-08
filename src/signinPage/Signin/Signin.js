@@ -1,9 +1,8 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SellCar from '../../SignupPage/SellCar/SellCar';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
-import { toast } from 'react-toastify';
 import SocialSignin from '../../socialSignin/SocialSignin/SocialSignin';
 import PageTitle from '../../hooks/PageTitle/PageTitle';
 import { useState } from 'react';
@@ -30,9 +29,9 @@ const Signin = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate()
     let location = useLocation();
-    const [sendPasswordResetEmail] = useSendPasswordResetEmail(
-        auth
-    );
+    // const [sendPasswordResetEmail] = useSendPasswordResetEmail(
+    //     auth
+    // );
 
     if (loading) {
         return <Loading></Loading>
@@ -58,18 +57,18 @@ const Signin = () => {
     }
 
     // handle Reset Password
-    const resetPassword = async (event) => {
-        const email = event.target.email.value
-        console.log("email", email)
-        if (email) {
-            await sendPasswordResetEmail(email);
-            toast('Sent email');
-        }
-        else {
-            toast('please enter your email address');
-        }
+    // const resetPassword = async (event) => {
+    //     const email = event.target.email.value
+    //     console.log("email", email)
+    //     if (email) {
+    //         await sendPasswordResetEmail(email);
+    //         toast('Sent email');
+    //     }
+    //     else {
+    //         toast('please enter your email address');
+    //     }
 
-    }
+    // }
 
     // password
     const handleClickShowPassword = () => {
@@ -118,12 +117,13 @@ const Signin = () => {
                                         </IconButton>
                                     </InputAdornment>
                                 }
+                                required
                             />
                         </div>
                         <p> {errorElement}</p>
 
                         <div className=" my-6">
-                            <button onClick={resetPassword}
+                            <button
                                 class="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out cursor-pointer">Forgot
                                 password?</button>
                         </div>
