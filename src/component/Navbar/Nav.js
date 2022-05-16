@@ -59,8 +59,10 @@ const Nav = () => {
                         </>
                     }
 
-                    <li className='md:mr-5 my-1 md:my-0'><CustomLink to="/signup">Sign Up</CustomLink></li>
+                    {
+                        !user && <li className='md:mr-5 my-1 md:my-0'><CustomLink to="/signup">Sign Up</CustomLink></li>
 
+                    }
                     {
                         !user &&
 

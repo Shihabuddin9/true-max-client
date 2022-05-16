@@ -6,10 +6,12 @@ import Loading from '../Loading/Loading';
 import SocialSignin from '../../socialSignin/SocialSignin/SocialSignin';
 import PageTitle from '../../hooks/PageTitle/PageTitle';
 import { toast } from 'react-toastify';
+import { useState } from 'react';
 
 
 
 const Signin = () => {
+    const [email, setEmail] = useState('');
     const [
         signInWithEmailAndPassword,
         user,
@@ -51,20 +53,6 @@ const Signin = () => {
         errorMassage = <p className='text-red-600 font-bold text-center mt-2'>Please Enter Correct Email and Password</p>
     }
 
-    // handle Reset Password
-    const resetPassword = async (event) => {
-        const email = event.target.email.value
-        console.log("email", email)
-        if (email) {
-            await sendPasswordResetEmail(email);
-            toast('Sent email');
-        }
-        else {
-            toast('please enter your email address');
-        }
-
-    }
-
 
     return (
         <div className='md:pb-28 pb-10 bg-gray-200'>
@@ -81,21 +69,28 @@ const Signin = () => {
                     <form onSubmit={handleUserSignin}>
                         <div className="form-group mb-6">
                             <label for="exampleInputEmail2" className="form-label inline-block mb-2 text-gray-700">Email</label>
-                            <input type="email" name="email" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none focus:border-b-2 border-b-2 border-b-gray-400 hover:border-b-2 hover:border-b-gray-800 focus:border-b-blue-600" id="exampleInputEmail2"
-                                aria-describedby="emailHelp" required />
+                            <input type="email" name="email" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none" id="exampleInputEmail2"
+                                aria-describedby="emailHelp" required value={email}
+                                onChange={(e) => setEmail(e.target.value)} />
                         </div>
 
                         <div className="form-group mb-1">
                             <label for="exampleInputPassword2" className="form-label inline-block mb-2 text-gray-700">Password</label>
-
-
-                            <input type="password" name="password" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none focus:border-b-2 border-b-2 border-b-gray-400 hover:border-b-2 hover:border-b-gray-800 focus:border-b-blue-600" id="exampleInputEmail2"
+                            <input type="password" name="password" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none" id="exampleInputEmail2"
                                 aria-describedby="emailHelp" required />
                         </div>
 
                         <p className='my-1'> {errorMassage}</p>
                         <div className=" my-6">
-                            <button onClick={resetPassword}
+                            <button onClick={async () => {
+                                if (email) {
+                                    await sendPasswordResetEmail(email);
+                                    toast('Sent email');
+                                }
+                                else {
+                                    toast('please enter your email address');
+                                }
+                            }}
                                 class="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out cursor-pointer">Forgot
                                 password?</button>
                         </div>

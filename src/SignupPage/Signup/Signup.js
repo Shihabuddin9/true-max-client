@@ -68,21 +68,21 @@ const Signup = () => {
                         {/* email */}
                         <div className="form-group mb-6">
                             <label for="exampleInputEmail2" className="form-label inline-block mb-2 text-gray-700">Email</label>
-                            <input type="email" name="email" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none focus:border-b-2 border-b-2 border-b-gray-400 hover:border-b-2 hover:border-b-gray-800 focus:border-b-blue-600" id="exampleInputEmail2"
+                            <input type="email" name="email" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none " id="exampleInputEmail2"
                                 aria-describedby="emailHelp" required />
                         </div>
                         {/* password */}
                         <div className="form-group mb-6">
                             <label for="exampleInputPassword2" className="form-label inline-block mb-2 text-gray-700">password</label>
 
-                            <input type="password" name="password" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none focus:border-b-2 border-b-2 border-b-gray-400 hover:border-b-2 hover:border-b-gray-800 focus:border-b-blue-600" id="exampleInputEmail2"
+                            <input type="password" name="password" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none" id="exampleInputEmail2"
                                 aria-describedby="emailHelp" required />
                         </div>
                         {/* confirm-password */}
                         <div className="form-group mb-6">
                             <label for="exampleInputPassword2" className="form-label inline-block mb-2 text-gray-700">confirm-Password</label>
 
-                            <input type="password" name="confirmPassword" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none focus:border-b-2 border-b-2 border-b-gray-400 hover:border-b-2 hover:border-b-gray-800 focus:border-b-blue-600" id="exampleInputEmail2"
+                            <input type="password" name="confirmPassword" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none" id="exampleInputEmail2"
                                 aria-describedby="emailHelp" required />
 
                             <span className='text-red-500 text-xs'>{notMatchPassword}</span>
