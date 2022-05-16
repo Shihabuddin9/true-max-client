@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import PageTitle from '../../hooks/PageTitle/PageTitle';
 import MyItem from '../MyItem/MyItem';
 
 const MyItems = () => {
@@ -20,6 +21,7 @@ const MyItems = () => {
     }, [user])
     return (
         <div className='md:mt-16 mt-14 pb-40'>
+            <PageTitle title='MY ITEMS'></PageTitle>
             <nav className='bg-gray-200 w-full mb-10'>
                 <Link to="/service"><button className='text-gray-800 text-sm py-3 md:ml-12 ml-2'>&#171;
                     Manage Items</button></Link>

@@ -1,26 +1,15 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SellCar from '../../SignupPage/SellCar/SellCar';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import SocialSignin from '../../socialSignin/SocialSignin/SocialSignin';
 import PageTitle from '../../hooks/PageTitle/PageTitle';
-import { useState } from 'react';
-import IconButton from "@material-ui/core/IconButton";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import Input from "@material-ui/core/Input";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
+import { toast } from 'react-toastify';
+
 
 
 const Signin = () => {
-
-    const [values, setValues] = useState({
-        password: "",
-        showPassword: false,
-    });
-
-    let errorElement;
     const [
         signInWithEmailAndPassword,
         user,
@@ -29,9 +18,10 @@ const Signin = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const navigate = useNavigate()
     let location = useLocation();
-    // const [sendPasswordResetEmail] = useSendPasswordResetEmail(
-    //     auth
-    // );
+    const [sendPasswordResetEmail] = useSendPasswordResetEmail(
+        auth
+    );
+
 
     if (loading) {
         return <Loading></Loading>
@@ -43,45 +33,39 @@ const Signin = () => {
         navigate(from, { replace: true });
     }
 
-    if (error) {
-        errorElement = <p className='text-red-600'>Error: {error?.message}</p>
-    }
+
 
     const handleUserSignin = event => {
         event.preventDefault()
         const email = event.target.email.value
-        const password = `event.target.${values}.value`
-        // console.log(email, password)
+        const password = event.target.password.value
+
         signInWithEmailAndPassword(email, password)
 
     }
 
+
+    let errorMassage;
+    if (error) {
+        console.log(error)
+        errorMassage = <p className='text-red-600 font-bold text-center mt-2'>Please Enter Correct Email and Password</p>
+    }
+
     // handle Reset Password
-    // const resetPassword = async (event) => {
-    //     const email = event.target.email.value
-    //     console.log("email", email)
-    //     if (email) {
-    //         await sendPasswordResetEmail(email);
-    //         toast('Sent email');
-    //     }
-    //     else {
-    //         toast('please enter your email address');
-    //     }
+    const resetPassword = async (event) => {
+        const email = event.target.email.value
+        console.log("email", email)
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else {
+            toast('please enter your email address');
+        }
 
-    // }
+    }
 
-    // password
-    const handleClickShowPassword = () => {
-        setValues({ ...values, showPassword: !values.showPassword });
-    };
 
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    };
-
-    const handlePasswordChange = (prop) => (event) => {
-        setValues({ ...values, [prop]: event.target.value });
-    };
     return (
         <div className='md:pb-28 pb-10 bg-gray-200'>
             <PageTitle title="SIGNIN"></PageTitle>
@@ -103,27 +87,15 @@ const Signin = () => {
 
                         <div className="form-group mb-1">
                             <label for="exampleInputPassword2" className="form-label inline-block mb-2 text-gray-700">Password</label>
-                            <Input className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                type={values.showPassword ? "text" : "password"}
-                                onChange={handlePasswordChange("password")}
-                                value={values.password}
-                                endAdornment={
-                                    <InputAdornment position="end">
-                                        <IconButton
-                                            onClick={handleClickShowPassword}
-                                            onMouseDown={handleMouseDownPassword}
-                                        >
-                                            {values.showPassword ? <FontAwesomeIcon className='w-4' icon={faEye} /> : <FontAwesomeIcon className='w-4' icon={faEyeSlash} />}
-                                        </IconButton>
-                                    </InputAdornment>
-                                }
-                                required
-                            />
-                        </div>
-                        <p> {errorElement}</p>
 
+
+                            <input type="password" name="password" className="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:outline-none focus:border-b-2 border-b-2 border-b-gray-400 hover:border-b-2 hover:border-b-gray-800 focus:border-b-blue-600" id="exampleInputEmail2"
+                                aria-describedby="emailHelp" required />
+                        </div>
+
+                        <p className='my-1'> {errorMassage}</p>
                         <div className=" my-6">
-                            <button
+                            <button onClick={resetPassword}
                                 class="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out cursor-pointer">Forgot
                                 password?</button>
                         </div>
@@ -134,6 +106,7 @@ const Signin = () => {
                             className="text-blue-600 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out">Sign Up</a>
                         </p></Link>
                     </form>
+
                     <SocialSignin></SocialSignin>
                 </div>
             </div>

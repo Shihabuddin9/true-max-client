@@ -17,7 +17,9 @@ import ManageServices from './manageServices/ManageServices/ManageServices';
 import UpdateServices from './component/UpdateServices/UpdateServices';
 import Dealers from './component/Dealers/Dealers';
 import React, { useState, useEffect } from 'react'
-import { FadeLoader } from 'react-spinners';
+import {
+  PropagateLoader
+} from 'react-spinners';
 import MyItems from './component/MyItems/MyItems';
 
 
@@ -36,7 +38,10 @@ function App() {
       <div>
         {
           loading ?
-            <FadeLoader color={'#36D7B7'} loading={loading} size={40} />
+            <div className='flex justify-center h-screen items-center'>
+              <PropagateLoader
+                color={'#36D7B7'} loading={loading} size={25} />
+            </div>
             :
             <>
               <Header></Header>
