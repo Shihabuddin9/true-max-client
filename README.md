@@ -2,7 +2,7 @@
 
 ## Project Live link
 
-https://truemax.netlify.app/signup
+https://truemax.netlify.app/
 
 #### technology used
 + Javascript

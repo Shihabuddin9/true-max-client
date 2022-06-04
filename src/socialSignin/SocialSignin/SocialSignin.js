@@ -6,7 +6,7 @@ import Loading from '../../signinPage/Loading/Loading';
 import google from '../google-img/google.png'
 
 const SocialSignin = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, user, loading] = useSignInWithGoogle(auth);
     const navigate = useNavigate()
     let location = useLocation();
 
