@@ -32,32 +32,29 @@ const Nav = () => {
 
                     <li className='md:mx-5 my-1 md:my-0'><CustomLink to="/blogs">Blogs</CustomLink></li>
 
-                    {
-                        user && <>
+                    <ul className='md:mr-5 dropdown'>
+                        <li className=''>More Items&#8964;
 
-                            <ul className='md:mr-5 dropdown'>
-                                <li className=''>More Items&#8964;
+                            <ul className='dropdown-content'>
+                                <li className='md:mr-5 my-1 md:my-0'><CustomLink to="/service">
+                                    Manage Items</CustomLink></li>
 
-                                    <ul className='dropdown-content'>
-                                        <li className='md:mr-5 my-1 md:my-0'><CustomLink to="/service">
-                                            Manage Items</CustomLink></li>
+                                <li className='md:mr-5 my-1 md:my-0 '><CustomLink to="/addBestDealsCar">
+                                    Add Items</CustomLink></li>
 
-                                        <li className='md:mr-5 my-1 md:my-0 '><CustomLink to="/addBestDealsCar">
-                                            Add Items</CustomLink></li>
+                                <li className='md:mr-5 my-1 md:my-0 '><CustomLink to="/myitems">
+                                    My Items</CustomLink></li>
 
-                                        <li className='md:mr-5 my-1 md:my-0 '><CustomLink to="/myitems">
-                                            My Items</CustomLink></li>
-
-                                        <li className='mb-1 md:mb-0'><CustomLink to="/signin" onClick={() => signOut(auth)}>
-                                            Sign Out</CustomLink></li>
+                                {
+                                    user && <li className='mb-1 md:mb-0'><CustomLink to="/signin" onClick={() => signOut(auth)}>
+                                        Sign Out</CustomLink></li>
+                                }
 
 
-                                    </ul>
-
-                                </li>
                             </ul>
-                        </>
-                    }
+
+                        </li>
+                    </ul>
 
                     {
                         !user && <li className='md:mr-5 my-1 md:my-0'><CustomLink to="/signup">Sign Up</CustomLink></li>

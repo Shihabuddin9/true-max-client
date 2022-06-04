@@ -24,12 +24,12 @@ const BestDeal = (props) => {
             <div>
                 <div>
                     <small className='text-gray-600'>{transmission}</small>
-                    <small className='md:mx-3 mx-9 text-gray-600'>{drive}</small>
+                    <small className='mx-10 text-gray-600'>{drive}</small>
                     <small className='text-gray-600'>{mileage}</small>
                 </div>
                 <div className='flex justify-around mt-3'>
                     <p className='text-xs font-medium'>{engine}</p>
-                    <p className='text-xs font-medium px-9 md:px-0'>{wd}</p>
+                    <p className='text-xs font-medium md:px-6 px-0'>{wd}</p>
                     <p className='text-xs font-medium'>{mi}(mi)</p>
                 </div>
             </div>
