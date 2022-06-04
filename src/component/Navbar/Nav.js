@@ -26,13 +26,13 @@ const Nav = () => {
                 <ul className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto z-[-1] right-0 w-50 md:w-auto md:pl-0 pl-9 transition-all duration-500 ease-in ${open ? 'top-14' : 'top-[-490px]'}`}>
                     <li><CustomLink to="/">Home</CustomLink></li>
 
-                    <li className='md:mx-5 my-1 md:my-0'><CustomLink to="/inventory">Inventory</CustomLink></li>
+                    <li className='lg:mx-5 md:mx-3 my-1 md:my-0'><CustomLink to="/inventory">Inventory</CustomLink></li>
 
                     <li><CustomLink to="/dealers">Dealers</CustomLink></li>
 
-                    <li className='md:mx-5 my-1 md:my-0'><CustomLink to="/blogs">Blogs</CustomLink></li>
+                    <li className='lg:mx-5 md:mx-3 my-1 md:my-0'><CustomLink to="/blogs">Blogs</CustomLink></li>
 
-                    <ul className='md:mr-5 dropdown'>
+                    <ul className='lg:mr-5 md:mr-3 dropdown'>
                         <li className=''>More Items&#8964;
 
                             <ul className='dropdown-content'>
@@ -57,7 +57,7 @@ const Nav = () => {
                     </ul>
 
                     {
-                        !user && <li className='md:mr-5 my-1 md:my-0'><CustomLink to="/signup">Sign Up</CustomLink></li>
+                        !user && <li className='lg:mr-5 md:mr-3 my-1 md:my-0'><CustomLink to="/signup">Sign Up</CustomLink></li>
 
                     }
                     {

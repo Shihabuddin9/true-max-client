@@ -13,8 +13,8 @@ const Brands = () => {
     return (
         <section className='text-center md:my-20 my-12'>
             <p className='text-sm text-orange-500 font-medium'>TOP MAKES</p>
-            <h1 className='mt-2 md:text-4xl text-3xl font-semibold text-red-800'>Browse By Brands</h1>
-            <div className='grid md:grid-cols-6 grid-cols-2 md:gap-x-6 gap-x-2 md:gap-y-8 gap-y-6 md:mx-6 mx-1 md:mt-12 mt-6'>
+            <h1 className='mt-2 md:text-4xl text-3xl font-semibold'>Browse By Brands</h1>
+            <div className='grid md:grid-cols-6 grid-cols-2 md:gap-x-6 gap-x-2 md:gap-y-8 gap-y-6 mx-6 md:mt-12 mt-6'>
                 {
                     brands.map(brand => <Brand
                         key={brand.id}
